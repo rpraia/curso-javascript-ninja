@@ -44,27 +44,25 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function novaFuncao( x, y, z ) {
-  if {
-    x == null || y == null || z == null;
+  if( x === undefined || y === undefined || z === undefined; ) {
     return 'Preencha todos os valores corretamente!';
-    }
-   else {
-    var soma = x + Y + z;
-    return soma * 2;
-    }
+  }
+  else {
+    return x * y * z + 2;
+  }
  }
 
 // Invoque a função criada acima, passando só dois números como argumento.
 novaFuncao( 3, 2 )
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// Preencha todos os valores corretamente!
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+novaFuncao( 3, 2, 4 )
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 26
 
 /*
 Crie uma função com as seguintes características:
