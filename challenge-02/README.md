@@ -44,7 +44,7 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function novaFuncao( x, y, z ) {
-  if( x === undefined || y === undefined || z === undefined; ) {
+  if( x === undefined || y === undefined || z === undefined ) {
     return 'Preencha todos os valores corretamente!';
   }
   else {
@@ -73,8 +73,27 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function novaFuncao2( x, y, z ) {
+  if( x !== undefined && y === undefined && z === undefined ) {
+    return x;
+  }
+  else if( x !== undefined && y !== undefined && z === undefined ) {
+    return x + y;
+  }
+  else if( x !== undefined && y !== undefined && z !== undefined ) {
+    return (x + y) / z;
+  }
+  else if( x === undefined && y === undefined && z === undefined ) {
+    return false;
+  }
+  else {
+    return null;
+  }
+ }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+novaFuncao2(1) // 1
+novaFuncao2(1, 2) // 3
+novaFuncao2(1, 3, 2) // 2
+novaFuncao2() // false
 ```
