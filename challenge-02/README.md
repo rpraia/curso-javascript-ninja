@@ -15,7 +15,7 @@ var soma1 = functionSoma( 5, 4) + 5;
 14
 
 // Declare uma nova variável, sem valor.
-var texto1
+var varBlank;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
@@ -23,8 +23,8 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
 Onde VALOR é o novo valor da variável.
 */
 function addValor() {
-  texto1 = 'O valor da variável agora é VALOR. Onde VALOR é o novo valor da variável.';
-  return texto1;
+  varBlank = 17;
+  return 'O valor da variável agora é' + varBlank;
 }
 
 // Invoque a função criada acima.
@@ -32,8 +32,8 @@ addValor()
 
 // Qual o retorno da função? (Use comentários de bloco).
 /* 
-  A função retornará a string
-  'O valor da variável agora é VALOR. Onde VALOR é o novo valor da variável.'
+  A função retornará a string + mais o valor definido para a variável
+  O valor da variável agora é 17
 */
 
 /*
