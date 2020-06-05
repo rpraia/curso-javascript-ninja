@@ -31,7 +31,10 @@ function addValor() {
 addValor()
 
 // Qual o retorno da função? (Use comentários de bloco).
-/* */
+/* 
+  A função retornará a string
+  'O valor da variável agora é VALOR. Onde VALOR é o novo valor da variável.'
+*/
 
 /*
 Crie uma função com as seguintes características:
@@ -40,10 +43,19 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function novaFuncao( x, y, z ) {
+  if {
+    x == null || y == null || z == null;
+    return 'Preencha todos os valores corretamente!';
+    }
+   else {
+    var soma = x + Y + z;
+    return soma * 2;
+    }
+ }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+novaFuncao( 3, 2 )
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 ?
