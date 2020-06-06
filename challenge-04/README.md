@@ -116,8 +116,8 @@ carro.addPessoas = function( x ) {
     return 'Só cabem mais ' + ( 5 - carro.quantidadePessoas ) + plural + ' ' + '!';
   } 
   else {
-    carro.quantidadePessoas = carro.quantidadePessoas++;
-    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+    carro.quantidadePessoas = novasPessoas;
+    return 'Já temos ' + novasPessoas + ' pessoas no carro!';
   }
   
 }
