@@ -105,8 +105,20 @@ citado acima, no lugar de "pessoas".
 */
 carro.addPessoas = function( x ) {
   
-  carro.quantidadePessoas = carro.quantidadePessoas += x;
+  var assentos = carro.quantidadePessoas;
+  var novasPessoas = assentos + x;
   
+  if( assentos >= 5 ) { 
+    return 'O carro já está lotado!';
+    }
+  else if( assentos <= 4 && novasPessoas >= 5 ) {
+    var plural = 'pessoas' ? carro.quantidadePessoas <= 3 : 'pessoa';
+    return 'Só cabem mais ' + ( 5 - carro.quantidadePessoas ) + plural + ' ' + '!';
+  } 
+  else {
+    carro.quantidadePessoas = carro.quantidadePessoas++;
+    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+  }
   
 }
 
