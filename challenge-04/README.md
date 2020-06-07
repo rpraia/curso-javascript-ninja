@@ -105,19 +105,20 @@ citado acima, no lugar de "pessoas".
 */
 carro.addPessoas = function( x ) {
   
-  var assentos = carro.quantidadePessoas;
-  var novasPessoas = assentos + x;
+  var pessoas = carro.quantidadePessoas;
+  var novaQtPessoas = pessoas + x;
+  var disponivel = carro.assentos - pessoas;
   
-  if( assentos >= 5 ) { 
+  if( carro.quantidadePessoas === carro.assentos ) { 
     return 'O carro já está lotado!';
     }
-  else if( assentos <= 4 && novasPessoas >= 5 ) {
-    var plural = 'pessoas' ? carro.quantidadePessoas <= 3 : 'pessoa';
-    return 'Só cabem mais ' + ( 5 - carro.quantidadePessoas ) + plural + ' ' + '!';
+  else if( pessoas <= carro.assentos - 1 && novaQtPessoas > carro.assentos ) {
+    var plural = disponivel >= 2 ? 'pessoas' : 'pessoa';
+    return 'Só cabem mais ' + disponivel + ' ' +  plural + '!';
   } 
   else {
-    carro.quantidadePessoas = novasPessoas;
-    return 'Já temos ' + novasPessoas + ' pessoas no carro!';
+    carro.quantidadePessoas = carro.quantidadePessoas += x;
+    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
   }
   
 }
@@ -130,38 +131,38 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.cor // Preto
 
 // Mude a cor do carro para vermelho.
-?
+carro.cor = 'Vermelho'
 
 // E agora, qual a cor do carro?
-?
+carro.cor // Vermelho
 
 // Mude a cor do carro para verde musgo.
-?
+carro.cor = 'Verde musgo'
 
 // E agora, qual a cor do carro?
-?
+carro.cor // Verde musgo
 
 // Qual a marca e modelo do carro?
-?
+carro.modelo
 
 // Adicione 2 pessoas no carro.
-?
+carro.addPessoas(2)
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.addPessoas(4) // função retorna o valor 'Só cabem mais 3 pessoas!'
 
 // Faça o carro encher.
-?
+carro.addPessoas(3)
 
 // Tire 4 pessoas do carro.
-?
+carro.quantidadePessoas = carro.quantidadePessoas -= 4;
 
 // Adicione 10 pessoas no carro.
-?
+carro.addPessoas(10) // função retorna o valor 'Só cabem mais 4 pessoas!'
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas // 1
 ```
