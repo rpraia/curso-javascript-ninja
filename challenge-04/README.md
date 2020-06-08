@@ -61,7 +61,7 @@ var carro = {
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudaCor = function( x ) { carro.cor = x; }
+carro.mudarCor = function( x ) { carro.cor = x; }
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
@@ -84,7 +84,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function() {
-  return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo;
+  return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo();
 }
 
 /*
@@ -124,6 +124,30 @@ carro.addPessoas = function( x ) {
 }
 
 /*
+*** método atualizado com a correção do exercicio ***
+carro.addPessoas = function( x ) {
+  
+  var novaQtPessoas = carro.quantidadePessoas + x;  
+  
+  if( carro.quantidadePessoas === carro.assentos && novaQtPessoas >= carro.assentos ) { 
+    return 'O carro já está lotado!';
+    }
+  
+  if( novaQtPessoas > carro.assentos ) {
+    var disponivel = carro.assentos - carro.quantidadePessoas;
+    var plural = disponivel === 1 ? 'pessoa' : 'pessoas';
+    return 'Só cabem mais ' + disponivel + ' ' +  plural + '!';
+  } 
+  
+  carro.quantidadePessoas += x;
+   return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';  
+  
+}
+
+*/
+
+
+/*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
 adicionando comentários _inline_ ao lado com o valor retornado, se o método
@@ -131,25 +155,25 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-carro.cor // Preto
+carro.obterCor() // Preto
 
 // Mude a cor do carro para vermelho.
-carro.cor = 'Vermelho'
+carro.mudarCor('Vermelho')
 
 // E agora, qual a cor do carro?
-carro.cor // Vermelho
+carro.obterCor() // Vermelho
 
 // Mude a cor do carro para verde musgo.
-carro.cor = 'Verde musgo'
+carro.mudarCor('Verde musgo')
 
 // E agora, qual a cor do carro?
-carro.cor // Verde musgo
+carro.obterCor() // Verde musgo
 
 // Qual a marca e modelo do carro?
-carro.modelo
+carro.obterMarcaModelo() // Esse carro é um Ford EcoSport
 
 // Adicione 2 pessoas no carro.
-carro.addPessoas(2)
+carro.addPessoas(2) // 'Já temos duas pessoas no carro!'
 
 // Adicione mais 4 pessoas no carro.
 carro.addPessoas(4) // função retorna o valor 'Só cabem mais 3 pessoas!'
@@ -158,7 +182,7 @@ carro.addPessoas(4) // função retorna o valor 'Só cabem mais 3 pessoas!'
 carro.addPessoas(3)
 
 // Tire 4 pessoas do carro.
-carro.quantidadePessoas = carro.quantidadePessoas -= 4;
+carro.addPessoas(-4) // resolvido apos correção do exercício
 
 // Adicione 10 pessoas no carro.
 carro.addPessoas(10) // função retorna o valor 'Só cabem mais 4 pessoas!'
