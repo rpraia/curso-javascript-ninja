@@ -2,17 +2,19 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-// ?
+// var varArray = [ 'copo', betaFunction(), true, arvore.folhas, 666 ];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
-// ?
+var japan = [ 'neko', 'moti', 'hashi' ];
+function arrFunc( x ) { return  x; }
+console.log( arrFunc( japan ) );
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// ?
+arrFunc( japan )[1]
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -20,12 +22,16 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-// ?
+
+function numFunc( x, y ) {
+  return x[y];
+}
+numFumc( [ 6, 66, 666 ], 1 ) // 66
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-// ?
+var arrNum = [ 100, 200, 300, 400, 500 ];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
